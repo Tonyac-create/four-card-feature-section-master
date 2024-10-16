@@ -1,0 +1,174 @@
+:root {
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+  --veryDarkBlue: hsl(234, 12%, 34%);
+  --grayishBlue: hsl(229, 6%, 66%);
+  --veryLightGray: hsl(0, 0%, 98%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--veryLightGray);
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+.poppins-extralight {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-semibold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.top-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 16px;
+}
+
+.title {
+  color: var(--grayishBlue);
+  font-size: 1.25rem;
+  margin-bottom: 0;
+}
+
+.subtitle {
+  color: var(--veryDarkBlue);
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.text-top {
+  color: var(--grayishBlue);
+  margin-top: 0;
+  text-align: center;
+}
+
+.cards {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 0 16px;
+}
+
+.card {
+  width: 320px;
+  background-color: white;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 9px 1px rgb(212, 210, 210);
+}
+
+article:first-child {
+  border-top: 4px solid var(--cyan);
+}
+
+article:nth-child(2) {
+  border-top: 4px solid var(--red);
+}
+
+article:nth-child(3) {
+  border-top: 4px solid var(--orange);
+}
+
+article:nth-child(4) {
+  border-top: 4px solid var(--blue);
+}
+
+.text-article {
+  color: var(--grayishBlue);
+  text-align: left;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.icons {
+  display: flex;
+  margin-left: auto;
+}
+
+footer {
+  margin-top: 32px;
+}
+
+@media (min-width: 768px) {
+  .top-section {
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .left,
+  .right {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+  }
+
+  .middle {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 30px;
+  }
+}
